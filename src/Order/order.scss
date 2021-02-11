@@ -1,0 +1,37 @@
+@use '../main';
+.order {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 2fr 3fr;
+    gap: 10px;
+    .header {
+        grid-column: 1 / span 2;
+        grid-row: 1 / 1;
+    }
+    .datePicker {
+        grid-column: 1 / 1;
+        grid-row: 2 / span 3;
+    }
+    .numberPeople {
+        input {
+            font-size: 24px;
+        }
+    }
+    .orderButton {
+        font-size: 18px;
+        text-align: right;
+        button {
+            @include main.button;
+            width: 50%;
+            margin-top: 20px;
+        }
+    }
+    .title {
+        font-size: 28px;
+    }
+}
+
+.rdt {
+    color: #000;
+}

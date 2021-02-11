@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+$main-font-color: #fff;
+$primary-color: #ba2329;
+$secondary-color: #007ddb;
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #3d3f41 0%, #161414 100%);
+	color: $main-font-color;
+	a {
+    	color: $main-font-color;
+  	}
+  	ul {
+    	margin: 0;
+    	padding: 0;
+  	}
+  	
+}

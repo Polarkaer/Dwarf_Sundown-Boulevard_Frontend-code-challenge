@@ -1,0 +1,65 @@
+@use '../main';
+.drinks {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+    .listOfDrinks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .drink {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            background-color: rgba( #fff, 0.2);
+            box-sizing: border-box;
+            border: 6px solid rgba( #fff, 0.4);
+            border-radius: 4px;
+            margin: 0 20px 10px 0;
+            cursor: pointer;
+            &.active {
+                .selected {
+                    display: block;
+                }
+            }
+            .selected {
+                display: none;
+                font-size: 60px;
+                width: 80px;
+                color: main.$primary-color;
+                font-weight: 600;
+                border-radius: 40px;
+                position: absolute;
+                top: calc(50% - 50px);
+                left: calc(50% - 40px);
+                background-color: rgba( #fff, 0.8);
+                text-align: center;
+            }
+            .image {
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .title {
+                position: absolute;
+                bottom: 0;
+                width: calc(100% - 10px);
+                text-align: center;
+                background-color: rgba( #000, 0.4);
+                padding: 5px;
+            }
+        }
+    }
+    .nextContainer {
+        font-size: 18px;
+        button {
+            @include main.button;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}

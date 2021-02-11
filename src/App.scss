@@ -1,0 +1,38 @@
+$header-height: 80px;
+$footer-height: 40px;
+.app {
+	max-width: 900px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows:
+		$header-height
+		minmax(calc(100vh - (#{$header-height} + #{$footer-height})), auto)
+		$footer-height;
+	header {
+		display: flex;
+		nav {
+			width: 100%;
+			ul {
+				height: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				li {
+					min-width: 100px;
+					list-style: none;
+					a {
+						height: 100%;
+					}
+					.header-logo {
+						height: 60px;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		text-align: center;
+		line-height: 38px;
+	}
+}
+

@@ -1,0 +1,56 @@
+@use '../main';
+.dish {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 4fr 3fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+    .image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .details {
+        .title {
+            font-size: 40px;
+            line-height: 40px;
+            margin: 20px 0;
+        }
+        .type, .category {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .type {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .category {
+            font-size: 12px;
+        }
+        .ingredients {
+            font-size: 22px;
+            margin-bottom: 20px;
+            span {
+                display: block;
+                font-size: 16px;
+            }
+        }
+    }
+    .nextContainer {
+        font-size: 18px;
+        button {
+            @include main.button;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .new {
+        grid-column: 1 / 1;
+        grid-row: 3 / 3;
+        button {
+            @include main.button;
+        }
+    }
+}
